@@ -4,6 +4,10 @@
  */
 const express = require('express');
 const router = express.Router();
+const controller = require('./building.controller');
+
+router.get('/', controller.getAllBuildingWithClassrooms);
+router.put('/', controller.updateBuilding);
 
 
 module.exports = router;
